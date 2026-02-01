@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طيبة للمحروقات</title>
+</head>
+<body onclick="o()">
+    <div class="header">
+        <style>
+            .header{
+                display: flex;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                
+            }
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0%;
+                padding: 0%;
+            }
+            ul{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: right;
+                direction: rtl;
+                align-items: center;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 15vh;
+                position: fixed;
+                background: linear-gradient(25deg,rgb(66, 57, 2) 10%,rgb(82, 88, 4),rgb(8, 47, 8)50%,rgb(13, 40, 13) ,rgb(98, 84, 2));}
+            li{
+                list-style: none;
+            }
+            label{
+                border-radius: 5px;
+            }
+        </style>
+        <ul>
+            <li>عن الشركة</li>
+            <li>الحطات الرئيسية </li>
+            <li>الاسعار</li>
+            <li>اتصل بنا</li>
+        </ul>
+    </div>
+    <br><br><br><br>
+    <h1>شركة طيبة للمحروقات</h1>
+    <style>
+        li:hover{
+            color: #076b17;
+            background-color: white;
+            padding: 5px 102px;
+            text-align: center;
+            align-items: center;
+            max-width: 4400px;
+            scale:1.1 1.1;
+            margin: 10px;
+            cursor: pointer;
+        }
+        li{
+            transition: all 0.18s;
+        }
+        ul{
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            padding: 25px;
+        }
+        li{
+           max-width: 200px;
+           color: azure;
+
+            margin: 10px;
+            font-size: 1.5em;
+            /* text-wrap: nowrap; */
+        }
+        select{
+            width: 70%;
+            height: 8vh;
+            font-size: 2em;
+            color: aliceblue;
+            background-color:rgb(11, 37, 29);
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        option:focus{
+            color: aqua;
+            background-color: #076b17;
+        }
+        select::before{
+            color: aliceblue;
+            background-color: #076b17;
+        }
+         select::after{
+            color: aliceblue;
+            background-color: #076b17;
+        }
+         select::file-selector-button{
+            color: aliceblue;
+            background-color: #076b17;
+        }
+         select::selection{
+            color: aliceblue;
+            background-color: #076b17;
+        }
+         select:hover{
+            color: aliceblue;
+            background-color: #78025c;
+        }
+         option:hover{
+            color: aliceblue;
+            background-color: #610261;
+            cursor: pointer;
+        }
+        h1{
+            color:rgb(255, 247, 232);
+            backdrop-filter: blur(5px);
+            background: linear-gradient(4545deg ,rgb(16, 45, 16),rgb(102, 196, 102),rgb(32, 81, 32),rgb(2, 18, 2),rgb(2, 120, 2),rgb(32, 81, 32),rgb(32, 81, 32),rgb(32, 81, 32),rgb(32, 81, 32),rgb(32, 81, 32),rgb(91, 255, 91));
+            background-color: rgb(47, 50, 53);
+            background-blend-mode:difference;
+            padding: 10px;
+            margin: auto;
+            margin-top: 30px;
+            max-width: 500px;
+            text-wrap: nowrap;
+            border-radius: 25px;
+            border: 2px solid rgb(255, 247, 232);
+        }
+        body{
+            background-repeat: round;
+            background: linear-gradient(120deg , rgb(184, 228, 238),rgb(200, 245, 200),rgb(95, 160, 244));
+        }
+        select option{
+            border-radius: 250px!important;
+            background-color: rgb(111, 255, 15);
+        }
+        select::selection{
+            border-radius: 250px!important;
+            border: 5px solid blue;
+        }
+    select::selection {
+    color: rgb(10, 52, 88);
+    background-color: #800606;
+}
+::-moz-selection{
+        color: rgb(10, 52, 88);
+    background-color: #800606;
+}
+::-webkit-keygen-select{
+        color: rgb(10, 52, 88);
+    background-color: #800606;
+}
+select::-moz-selection{
+        color: rgb(10, 52, 88);
+    background-color: #800606;
+}
+:optional{
+        color: rgb(10, 52, 88);
+    background-color: #800606;
+    border: 5px solid rgb(14, 140, 168);
+    height: 8vh;
+}
+    </style>
+    <select id = "op">
+        <option value="d" id="d">doler</option>
+        <option value="t" id="t">trky</option>
+        <option value="s" id="s">sory</option>
+    </select>
+    <div class="container">
+        <input type="number"  placeholder="dollers" class="dlr" id="dlr">
+        <input type="number"  placeholder="layra turky" class="dlr" id="trk">
+        <input type="number" placeholder=" sory" class="dlr" id="sor">
+        <label for="" id="dlrl">0</label>
+        <label for="" class="trkl" id="trkl">0</label>
+        <label for="" class="trkl" id="sorl">0</label>
+        <label for="" class="ltr" id="ltr">0</label>
+<script>
+     var a =1 
+    function o(){ 
+
+            setTimeout(()=>
+            setInterval(()=>{
+                let op = document.getElementById('op').value
+
+                if (op == 'd')
+                    dlrf()
+                
+                if (op == 's')
+                    dlrs()
+                
+                if (op == 't')
+                    dlrt()
+                
+
+            }),1000
+        )
+    }
+    function dlrf() {
+            let dlr = document.getElementById('dlr').value;
+            let trk = document.getElementById('trk').value;
+            let sor = document.getElementById('sor').value;
+            let trkl = document.getElementById('trkl');
+            let dlrl = document.getElementById('dlrl');
+            let sorl = document.getElementById('sorl');
+            let ltr = document.getElementById('ltr');
+            ltr.innerHTML = (dlr*1.20).toFixed(3)
+            trkl.innerHTML = (dlr * 44).toFixed(3);
+            dlrl.innerHTML = dlr
+            sorl.innerHTML = (dlr * 115).toFixed(3);
+            document.getElementById('trk').value = (dlr * 44).toFixed(3);
+            document.getElementById('sor').value = (dlr * 115).toFixed(3);
+        }
+        function dlrs() {
+                let dlr = document.getElementById('dlr').value;
+                let trk = document.getElementById('trk').value;
+                let sor = document.getElementById('sor').value;
+                let trkl = document.getElementById('trkl');
+                let dlrl = document.getElementById('dlrl');
+                let sorl = document.getElementById('sorl');
+                let ltr = document.getElementById('ltr');
+                ltr.innerHTML = (dlr * 1.20).toFixed(3)
+                trkl.innerHTML = (sor / 2.61).toFixed(3);
+                dlrl.innerHTML = (sor/115 ).toFixed(3)
+                sorl.innerHTML = sor
+                document.getElementById('trk').value = (sor / 2.61).toFixed(3);
+                document.getElementById('dlr').value = (sor/115).toFixed(3);
+            }
+function dlrt() {
+                    let dlr = document.getElementById('dlr').value;
+                    let trk = document.getElementById('trk').value;
+                    let sor = document.getElementById('sor').value;
+                    let trkl = document.getElementById('trkl');
+                    let dlrl = document.getElementById('dlrl');
+                    let sorl = document.getElementById('sorl');
+                    let ltr = document.getElementById('ltr');
+                    ltr.innerHTML = (dlr * 1.20).toFixed(3)
+                    trkl.innerHTML = trk;
+                    dlrl.innerHTML = (trk/44).toFixed(3)
+                    sorl.innerHTML = (trk * 2.61).toFixed(3);
+                    document.getElementById('dlr').value = (trk / 44).toFixed(3);
+                    document.getElementById('sor').value = (trk / 2.61).toFixed(3);
+                }
+</script>
+        <style>
+            .container{
+                border: 8px solid blue;
+                outline: 5px solid gold;
+                border-radius: 50px;
+                padding: 20px;
+                margin: auto;
+                /* margin-top: 3/0px; */
+                width: 70%;
+                height: auto;
+                background-color:#076b17;
+                background: linear-gradient(1245deg,rgb(139, 149, 139),rgb(46, 84, 46),rgb(3, 70, 3) ,gold);
+                font-size: 2em;
+                display: flex;
+                flex-flow: column;
+                flex-wrap: wrap;
+            }
+          input[type='number'] { -moz-appearance: textfield; appearance: textfield; } input[type='number']::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }   
+            input[type="number"]{
+                width: 50%;
+                height: 8vh;
+                margin: auto;
+                font-size: larger;
+                margin-top: 10px;
+                border-radius: 10px;
+                
+            }
+            #trkl{
+                color: aliceblue;
+                background-color: red;
+            }
+            #sorl{
+                color: aliceblue;
+                background-color: rgb(137, 135, 8);
+            }
+            #ltr{
+                color: azure;
+                background-color: blue;
+            }
+            label{
+                display: block;
+            }
+            #dlrl{
+                background-color: rgb(173, 198, 198);
+                color: green;
+            }
+            *{
+                text-align: center;
+            }
+        </style>
+    </div>
+    </body>
+</html>
